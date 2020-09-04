@@ -21,20 +21,27 @@ function DataFetching() {
     //         });
     // }, [])
 
+
+    const handleClick = () => {
+        setIdFromButtonClick(id);
+    }
+
     useEffect(() => {
-        axios.get(`https://jsonplaceholder.typicode.com/posts/${id}`)
+        console.log(idFromButtonClick, 'idFromButtonClick');
+        axios.get(`https://jsonplaceholder.typicode.com/posts/${idFromButtonClick}`)
             .then(res => {
                 console.log(res);
                 setPost(res.data);
             }).catch(err => {
                 console.log(err);
             });
-    }, [id])
+    }, [idFromButtonClick])
 
     return (
         <div>
             <input type="text" value={id} onChange={e => setId(e.target.value)} />
 
+            <button type="button" onClick={handleClick}> Fetch Post</button>
             <div>{post.title}</div>
             {/* <ul>
                 {
