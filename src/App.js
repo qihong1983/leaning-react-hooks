@@ -28,8 +28,9 @@ function App() {
   return (
     <div className="App">
       {/* <CounterOne /> */}
-      <CounterThree />
+      {/* <CounterThree /> */}
       {/* <CounterTwo /> */}
+      <ParentComponent />
     </div>
   );
 }
