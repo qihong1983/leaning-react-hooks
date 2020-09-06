@@ -18,6 +18,7 @@ import ComponentF from './components/ComponentF';
 import CounterOne from './components/CounterOne';
 import CounterTwo from './components/CounterTwo';
 import CounterThree from './components/CounterThree';
+import Counter from './components/Counter';
 
 
 export const UserContext = React.createContext();
@@ -30,7 +31,7 @@ function App() {
       {/* <CounterOne /> */}
       {/* <CounterThree /> */}
       {/* <CounterTwo /> */}
-      <ParentComponent />
+      <Counter />
     </div>
   );
 }
